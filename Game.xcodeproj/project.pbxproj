@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		43C718739AF1B148CE3F325A /* libPods-Game.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB71527A4071DD5017982967 /* libPods-Game.a */; };
 		DA84F6DA2179D3BF003B6FFA /* libLogic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF6D7412179CE4600D701FB /* libLogic.a */; };
+		DA877E112179E781008B2B59 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA877E102179E781008B2B59 /* HomeView.swift */; };
+		DA877E132179E78B008B2B59 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA877E122179E78B008B2B59 /* HomePresenter.swift */; };
 		DAF6D7482179CEBE00D701FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF6D7472179CEB500D701FB /* LaunchScreen.storyboard */; };
 		DAF6D74F2179CEE400D701FB /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF6D74E2179CEE400D701FB /* WidgetView.swift */; };
 		DAF6D7542179CEED00D701FB /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF6D7522179CEED00D701FB /* Navigation.swift */; };
@@ -59,6 +61,8 @@
 /* Begin PBXFileReference section */
 		96F400EBD4BB75DE946731FA /* Pods-Game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game.debug.xcconfig"; path = "Target Support Files/Pods-Game/Pods-Game.debug.xcconfig"; sourceTree = "<group>"; };
 		9BB58AAFC72181EC4511A1FF /* Pods-Game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game.release.xcconfig"; path = "Target Support Files/Pods-Game/Pods-Game.release.xcconfig"; sourceTree = "<group>"; };
+		DA877E102179E781008B2B59 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DA877E122179E78B008B2B59 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		DAF6D73E2179CAA700D701FB /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF6D73F2179CE4600D701FB /* Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF6D7402179CE4600D701FB /* Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Widget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +122,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DA877E0F2179E626008B2B59 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DA877E122179E78B008B2B59 /* HomePresenter.swift */,
+				DA877E102179E781008B2B59 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		DAF6D6F02179CA4700D701FB = {
 			isa = PBXGroup;
 			children = (
@@ -140,8 +153,8 @@
 		DAF6D7442179CEB500D701FB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DAF6D7452179CEB500D701FB /* Widget */,
 				DAF6D7462179CEB500D701FB /* Game */,
+				DAF6D7452179CEB500D701FB /* Widget */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -183,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				DAF6D7512179CEED00D701FB /* Shared */,
+				DA877E0F2179E626008B2B59 /* Home */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -190,8 +204,8 @@
 		DAF6D7512179CEED00D701FB /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				DAF6D7522179CEED00D701FB /* Navigation.swift */,
 				DAF6D7532179CEED00D701FB /* Application.swift */,
+				DAF6D7522179CEED00D701FB /* Navigation.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -395,8 +409,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA877E112179E781008B2B59 /* HomeView.swift in Sources */,
 				DAF6D7552179CEED00D701FB /* Application.swift in Sources */,
 				DAF6D7542179CEED00D701FB /* Navigation.swift in Sources */,
+				DA877E132179E78B008B2B59 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
