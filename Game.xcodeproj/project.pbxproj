@@ -578,7 +578,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 96F400EBD4BB75DE946731FA /* Pods-Game.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = Configuration/game.plist;
@@ -596,7 +595,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9BB58AAFC72181EC4511A1FF /* Pods-Game.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = Configuration/game.plist;
