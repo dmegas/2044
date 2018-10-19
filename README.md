@@ -4,4 +4,4 @@
 ![Swift](https://img.shields.io/badge/Swift-4.2-blue.svg)
 [![Bitrise](https://app.bitrise.io/app/8a121cdfdf200cf0/status.svg?token=L8qKO7xe5nMSN2csrZGJrg&branch=master)](https://app.bitrise.io/app/8a121cdfdf200cf0)
 
-![Install](itms-services://?action=download-manifest&url=https://github.com/dmegas/2044/releases/download/0.0.1/manifest.plist)
+[Install](itms-services://?action=download-manifest&url=https://github.com/dmegas/2044/releases/download/0.0.1/manifest.plist)
