@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		43C718739AF1B148CE3F325A /* libPods-Game.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB71527A4071DD5017982967 /* libPods-Game.a */; };
+		DA4C41602181289100D3743C /* HourglassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4C415F2181289100D3743C /* HourglassView.swift */; };
+		DA4C4162218128AD00D3743C /* HourglassPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4C4161218128AD00D3743C /* HourglassPresenter.swift */; };
 		DA54B12E217A0FE10020C20B /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54B12D217A0FE10020C20B /* IntroView.swift */; };
 		DA54B130217A0FE90020C20B /* IntroPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54B12F217A0FE90020C20B /* IntroPresenter.swift */; };
 		DA54B133217A10DC0020C20B /* intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DA54B132217A10DC0020C20B /* intro.mp4 */; };
@@ -66,6 +68,8 @@
 /* Begin PBXFileReference section */
 		96F400EBD4BB75DE946731FA /* Pods-Game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game.debug.xcconfig"; path = "Target Support Files/Pods-Game/Pods-Game.debug.xcconfig"; sourceTree = "<group>"; };
 		9BB58AAFC72181EC4511A1FF /* Pods-Game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game.release.xcconfig"; path = "Target Support Files/Pods-Game/Pods-Game.release.xcconfig"; sourceTree = "<group>"; };
+		DA4C415F2181289100D3743C /* HourglassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourglassView.swift; sourceTree = "<group>"; };
+		DA4C4161218128AD00D3743C /* HourglassPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourglassPresenter.swift; sourceTree = "<group>"; };
 		DA54B12D217A0FE10020C20B /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		DA54B12F217A0FE90020C20B /* IntroPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroPresenter.swift; sourceTree = "<group>"; };
 		DA54B132217A10DC0020C20B /* intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = intro.mp4; sourceTree = "<group>"; };
@@ -130,6 +134,15 @@
 				EB71527A4071DD5017982967 /* libPods-Game.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA4C415E2181286B00D3743C /* Hourglass */ = {
+			isa = PBXGroup;
+			children = (
+				DA4C4161218128AD00D3743C /* HourglassPresenter.swift */,
+				DA4C415F2181289100D3743C /* HourglassView.swift */,
+			);
+			path = Hourglass;
 			sourceTree = "<group>";
 		};
 		DA54B12C217A0F8B0020C20B /* Intro */ = {
@@ -224,6 +237,7 @@
 		DAF6D7502179CEED00D701FB /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				DA4C415E2181286B00D3743C /* Hourglass */,
 				DAF6D7512179CEED00D701FB /* Shared */,
 				DA877E0F2179E626008B2B59 /* Home */,
 				DA54B12C217A0F8B0020C20B /* Intro */,
@@ -443,6 +457,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA877E112179E781008B2B59 /* HomeView.swift in Sources */,
+				DA4C4162218128AD00D3743C /* HourglassPresenter.swift in Sources */,
+				DA4C41602181289100D3743C /* HourglassView.swift in Sources */,
 				DA54B130217A0FE90020C20B /* IntroPresenter.swift in Sources */,
 				DAF6D7552179CEED00D701FB /* Application.swift in Sources */,
 				DA877E152179ECEA008B2B59 /* String.swift in Sources */,
