@@ -28,5 +28,14 @@ class HourglassView:View<HourglassPresenter>, SKSceneDelegate, SKPhysicsContactD
         scene.physicsWorld.contactDelegate = self
         skView.presentScene(scene)
         self.scene = scene
+        
+        let glass = SKSpriteNode(texture:nil, color:.red, size:CGSize(width:100, height:100))
+        glass.position = CGPoint(x:100, y:100)
+        scene.addChild(glass)
+        
+        skView.topAnchor.constraint(equalTo:view.topAnchor).isActive = true
+        skView.bottomAnchor.constraint(equalTo:view.bottomAnchor).isActive = true
+        skView.leftAnchor.constraint(equalTo:view.leftAnchor).isActive = true
+        skView.rightAnchor.constraint(equalTo:view.rightAnchor).isActive = true
     }
 }
