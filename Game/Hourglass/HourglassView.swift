@@ -29,8 +29,17 @@ class HourglassView:View<HourglassPresenter>, SKSceneDelegate, SKPhysicsContactD
         skView.presentScene(scene)
         self.scene = scene
         
-        let glass = SKSpriteNode(texture:nil, color:.red, size:CGSize(width:100, height:100))
-        glass.position = CGPoint(x:100, y:100)
+        let path = UIBezierPath()
+        path.move(to:CGPoint(x:28, y:0))
+        path.addLine(to:CGPoint(x:123, y:148))
+        path.addLine(to:CGPoint(x:-123, y:148))
+        path.addLine(to:CGPoint(x:-28, y:0))
+        path.addLine(to:CGPoint(x:-123, y:-148))
+        path.addLine(to:CGPoint(x:123, y:-148))
+        
+        let glass = SKSpriteNode(texture:SKTexture(image:#imageLiteral(resourceName: "hourglass.pdf")), color:.clear, size:CGSize(width:250, height:300))
+        glass.position = CGPoint(x:UIScreen.main.bounds.size.width / 2, y:UIScreen.main.bounds.size.height / 2)
+        glass.physicsBody = SKPhysicsBody(edgeLoopFrom:path.cgPath)
         scene.addChild(glass)
         
         skView.topAnchor.constraint(equalTo:view.topAnchor).isActive = true

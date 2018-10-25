@@ -18,6 +18,7 @@
 		DA877E132179E78B008B2B59 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA877E122179E78B008B2B59 /* HomePresenter.swift */; };
 		DA877E152179ECEA008B2B59 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA877E142179ECEA008B2B59 /* String.swift */; };
 		DA877E182179ED2A008B2B59 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA877E162179ED2A008B2B59 /* Localizable.strings */; };
+		DAC982E821827B08000E1701 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC982E721827B08000E1701 /* assets.xcassets */; };
 		DAF6D7482179CEBE00D701FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF6D7472179CEB500D701FB /* LaunchScreen.storyboard */; };
 		DAF6D74F2179CEE400D701FB /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF6D74E2179CEE400D701FB /* WidgetView.swift */; };
 		DAF6D7542179CEED00D701FB /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF6D7522179CEED00D701FB /* Navigation.swift */; };
@@ -77,6 +78,7 @@
 		DA877E122179E78B008B2B59 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		DA877E142179ECEA008B2B59 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		DA877E172179ED2A008B2B59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DAC982E721827B08000E1701 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		DAF6D73E2179CAA700D701FB /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF6D73F2179CE4600D701FB /* Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF6D7402179CE4600D701FB /* Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Widget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +214,7 @@
 				DA54B131217A10C30020C20B /* Sequences */,
 				DAF6D7472179CEB500D701FB /* LaunchScreen.storyboard */,
 				DA877E162179ED2A008B2B59 /* Localizable.strings */,
+				DAC982E721827B08000E1701 /* assets.xcassets */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 			files = (
 				DAF6D7482179CEBE00D701FB /* LaunchScreen.storyboard in Resources */,
 				DA877E182179ED2A008B2B59 /* Localizable.strings in Resources */,
+				DAC982E821827B08000E1701 /* assets.xcassets in Resources */,
 				DA54B133217A10DC0020C20B /* intro.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
