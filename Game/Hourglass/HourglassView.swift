@@ -4,6 +4,7 @@ import SpriteKit
 class HourglassView:View<HourglassPresenter>, SKSceneDelegate, SKPhysicsContactDelegate {
     private weak var skView:SKView!
     private weak var scene:SKScene!
+    private weak var glass:SKSpriteNode!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -13,6 +14,7 @@ class HourglassView:View<HourglassPresenter>, SKSceneDelegate, SKPhysicsContactD
     
     private func makeOutlets() {
         let skView = SKView()
+        skView.isUserInteractionEnabled = false
         skView.showsFPS = false
         skView.showsNodeCount = false
         skView.ignoresSiblingOrder = true
@@ -20,6 +22,13 @@ class HourglassView:View<HourglassPresenter>, SKSceneDelegate, SKPhysicsContactD
         skView.showsPhysics = false
         view.addSubview(skView)
         self.skView = skView
+        
+        let slider = UISlider()
+        slider.translatesAutoresizingMaskIntoConstraints = false
+        slider.minimumValue = -1
+        slider.maximumValue = 1
+        slider.addTarget(self, action:#selector(rotate(slider:)), for:.valueChanged)
+        view.addSubview(slider)
         
         let scene = SKScene(size:UIScreen.main.bounds.size)
         scene.backgroundColor = .clear
@@ -41,10 +50,19 @@ class HourglassView:View<HourglassPresenter>, SKSceneDelegate, SKPhysicsContactD
         glass.position = CGPoint(x:UIScreen.main.bounds.size.width / 2, y:UIScreen.main.bounds.size.height / 2)
         glass.physicsBody = SKPhysicsBody(edgeLoopFrom:path.cgPath)
         scene.addChild(glass)
+        self.glass = glass
         
         skView.topAnchor.constraint(equalTo:view.topAnchor).isActive = true
         skView.bottomAnchor.constraint(equalTo:view.bottomAnchor).isActive = true
         skView.leftAnchor.constraint(equalTo:view.leftAnchor).isActive = true
         skView.rightAnchor.constraint(equalTo:view.rightAnchor).isActive = true
+        
+        slider.leftAnchor.constraint(equalTo:view.leftAnchor, constant:50).isActive = true
+        slider.rightAnchor.constraint(equalTo:view.rightAnchor, constant:-50).isActive = true
+        slider.bottomAnchor.constraint(equalTo:view.bottomAnchor, constant:-50).isActive = true
+    }
+    
+    @objc private func rotate(slider:UISlider) {
+        glass.zRotation = .pi * CGFloat(slider.value)
     }
 }
