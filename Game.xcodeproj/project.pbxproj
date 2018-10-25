@@ -237,9 +237,9 @@
 		DAF6D7502179CEED00D701FB /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				DA4C415E2181286B00D3743C /* Hourglass */,
 				DAF6D7512179CEED00D701FB /* Shared */,
 				DA877E0F2179E626008B2B59 /* Home */,
+				DA4C415E2181286B00D3743C /* Hourglass */,
 				DA54B12C217A0F8B0020C20B /* Intro */,
 			);
 			path = Game;
