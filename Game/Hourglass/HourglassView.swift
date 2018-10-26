@@ -60,6 +60,21 @@ class HourglassView:View<HourglassPresenter>, SKSceneDelegate, SKPhysicsContactD
         slider.leftAnchor.constraint(equalTo:view.leftAnchor, constant:50).isActive = true
         slider.rightAnchor.constraint(equalTo:view.rightAnchor, constant:-50).isActive = true
         slider.bottomAnchor.constraint(equalTo:view.bottomAnchor, constant:-50).isActive = true
+        
+        addSand()
+    }
+    
+    private func addSand() {
+        let sand = SKSpriteNode(texture:nil, color:.white, size:CGSize(width:4, height:4))
+        sand.position = CGPoint(x:UIScreen.main.bounds.size.width / 2, y:UIScreen.main.bounds.size.height / 2)
+        sand.physicsBody = SKPhysicsBody(edgeLoopFrom:CGRect(x:-2, y:-2, width:4, height:4))
+        sand.physicsBody!.isDynamic = true
+        sand.physicsBody!.friction = 0
+        sand.physicsBody!.allowsRotation = true
+        sand.physicsBody!.restitution = 1
+        sand.physicsBody!.density = 100
+        sand.physicsBody!.velocity = CGVector(dx:0, dy:-10)
+        scene.addChild(sand)
     }
     
     @objc private func rotate(slider:UISlider) {
