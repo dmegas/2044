@@ -35,8 +35,8 @@ class HourglassView:View<HourglassPresenter>, SKSceneDelegate, SKPhysicsContactD
         scene.scaleMode = .resizeFill
         scene.delegate = self
         scene.physicsWorld.contactDelegate = self
-        scene.physicsWorld.gravity = CGVector(dx:0, dy:-1)
         skView.presentScene(scene)
+        rotate(slider:slider)
         self.scene = scene
         
         let path = UIBezierPath()
@@ -78,6 +78,7 @@ class HourglassView:View<HourglassPresenter>, SKSceneDelegate, SKPhysicsContactD
     }
     
     @objc private func rotate(slider:UISlider) {
-        glass.zRotation = .pi * CGFloat(slider.value)
+        let angle = .pi * CGFloat(slider.value)
+        scene.physicsWorld.gravity = CGVector(dx:cos(angle), dy:sin(angle))
     }
 }
