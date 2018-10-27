@@ -35,6 +35,7 @@ class HourglassView:View<HourglassPresenter>, SKSceneDelegate, SKPhysicsContactD
         scene.scaleMode = .resizeFill
         scene.delegate = self
         scene.physicsWorld.contactDelegate = self
+        scene.physicsWorld.gravity = CGVector(dx:0, dy:-1)
         skView.presentScene(scene)
         self.scene = scene
         
@@ -72,8 +73,7 @@ class HourglassView:View<HourglassPresenter>, SKSceneDelegate, SKPhysicsContactD
         sand.physicsBody!.friction = 0
         sand.physicsBody!.allowsRotation = true
         sand.physicsBody!.restitution = 1
-        sand.physicsBody!.density = 100
-        sand.physicsBody!.velocity = CGVector(dx:0, dy:-10)
+        sand.physicsBody!.density = 1000
         scene.addChild(sand)
     }
     
